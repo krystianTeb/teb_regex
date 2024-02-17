@@ -7,13 +7,13 @@ import java.util.regex.Pattern;
 public class Main {
     public static void main(String[] args) {
 
-        var regex = "\\d";
+        var regex = "\\d{4}";//"[0-9]{4}"
         Pattern pattern = Pattern.compile(regex);
 
         while(true) {
             // Start - Pobieranie wartości od użytkownika
             Scanner scan = new Scanner(System.in);
-            System.out.println("Proszę o podanie cyfry od 0-9: ");
+            System.out.println("Proszę o podanie pinu (Cztery cyfry 0-9): ");
             String liczba = scan.next();
             // Koniec - Pobieranie wartości od użytkownika
             Matcher matcher = pattern.matcher(liczba);
@@ -21,7 +21,7 @@ public class Main {
             if(matcher.matches()) {
                 break;
             }else{
-                System.out.println("Podałeś złą wartość. Wprowadź cyfrę jeszcze raz!");
+                System.out.println("Podałeś złą wartość. Wprowadź cyfry jeszcze raz!");
             }
         }
 
