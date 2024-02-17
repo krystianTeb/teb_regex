@@ -18,10 +18,10 @@ public class Main {
             // Koniec - Pobieranie wartości od użytkownika
             Matcher matcher = pattern.matcher(liczba);
 
-            if(matcher.matches() == false) {
-                System.out.println("Podałeś złą wartość. Wprowadź cyfrę jeszcze raz!");
-            }else{
+            if(matcher.matches()) {
                 break;
+            }else{
+                System.out.println("Podałeś złą wartość. Wprowadź cyfrę jeszcze raz!");
             }
         }
 
